@@ -39,7 +39,7 @@ public class ServletRuntimeConfig {
      * If this is true then Undertow will record the request start time
      */
 
-    @ConfigItem
+    @ConfigItem 
     Optional<Boolean> recordRequestStartTime;
 
 }

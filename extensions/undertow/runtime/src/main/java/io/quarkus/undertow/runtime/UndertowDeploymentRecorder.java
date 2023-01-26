@@ -379,8 +379,8 @@ public class UndertowDeploymentRecorder {
                         .orElse(new MemorySize(BigInteger.valueOf(DEFAULT_BUFFER_SIZE))).asLongValue());
 
         UndertowOptionMap.Builder undertowOptions = UndertowOptionMap.builder();
-        undertowOptions.set(UndertowOptions.MAX_PARAMETERS, servletRuntimeConfig.maxParameters);
-        undertowOptions.set(UndertowOptions.RECORD_REQUEST_START_TIME, servletRuntimeConfig.recordRequestStartTime);
+        undertowOptions.set(UndertowOptions.MAX_PARAMETERS, servletRuntimeConfig.maxParameters );
+        undertowOptions.set(UndertowOptions.RECORD_REQUEST_START_TIME, servletRuntimeConfig.recordRequestStartTime );
         UndertowOptionMap undertowOptionMap = undertowOptions.getMap();
 
         return new Handler<RoutingContext>() {
