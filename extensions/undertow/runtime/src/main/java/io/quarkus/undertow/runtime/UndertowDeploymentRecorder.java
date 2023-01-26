@@ -380,6 +380,9 @@ public class UndertowDeploymentRecorder {
 
         UndertowOptionMap.Builder undertowOptions = UndertowOptionMap.builder();
         undertowOptions.set(UndertowOptions.MAX_PARAMETERS, servletRuntimeConfig.maxParameters);
+        if (servletRuntimeConfig.recordRequestStartTime.isPresent()) {
+            undertowOptions.set(UndertowOptions.RECORD_REQUEST_START_TIME, servletRuntimeConfig.recordRequestStartTime.get());
+        }
         UndertowOptionMap undertowOptionMap = undertowOptions.getMap();
 
         return new Handler<RoutingContext>() {
