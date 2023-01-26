@@ -33,4 +33,13 @@ public class ServletRuntimeConfig {
      */
     @ConfigItem(defaultValue = "1000")
     int maxParameters;
+
+
+    /**
+     * If this is true then Undertow will record the request start time
+     */
+
+    @ConfigItem
+    Optional<Boolean> recordRequestStartTime;
+
 }
