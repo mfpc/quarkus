@@ -847,6 +847,7 @@ public class SmallRyeOpenApiProcessor {
                         OpenAPI staticFileModel = io.smallrye.openapi.runtime.OpenApiProcessor
                                 .modelFromStaticFile(openApiConfig, staticFile);
                         mergedStaticModel = MergeUtil.mergeObjects(mergedStaticModel, staticFileModel);
+                        
                     }
                 }
                 return mergedStaticModel;
